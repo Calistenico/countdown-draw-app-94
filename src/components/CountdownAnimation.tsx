@@ -37,15 +37,15 @@ const CountdownAnimation: React.FC<CountdownAnimationProps> = ({ onComplete, isV
   if (!isVisible) return null;
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full bg-black flex items-center justify-center z-[9999] countdown-bg">
-      <div className="text-center w-full">
+    <div className="fixed inset-0 w-screen h-screen bg-black flex items-center justify-center z-[99999] countdown-bg" style={{ margin: 0, padding: 0 }}>
+      <div className="text-center w-full h-full flex flex-col items-center justify-center">
         <div 
           key={currentNumber}
-          className="countdown-number animate-countdown"
+          className="countdown-number animate-countdown mb-8"
         >
           {currentNumber}
         </div>
-        <p className="text-white/70 text-lg mt-8 font-medium">
+        <p className="text-white/70 text-lg font-medium">
           Preparando o sorteio...
         </p>
       </div>
