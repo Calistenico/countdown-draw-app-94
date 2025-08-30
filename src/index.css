@@ -148,14 +148,32 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
   }
 
-  .countdown-text {
-    font-size: 8rem;
+  .countdown-number {
+    font-size: 12rem;
     font-weight: 900;
-    background: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--accent)));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
+    color: white;
+    text-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  .countdown-bg {
+    background: #0a0a0a;
+    position: relative;
+  }
+
+  .countdown-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+      radial-gradient(circle at 40% 60%, rgba(255, 255, 255, 0.01) 0%, transparent 50%);
+    pointer-events: none;
   }
 
   .result-text {
