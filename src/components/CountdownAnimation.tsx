@@ -37,8 +37,8 @@ const CountdownAnimation: React.FC<CountdownAnimationProps> = ({ onComplete, isV
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 bg-black flex items-center justify-center z-50 countdown-bg">
-      <div className="text-center">
+    <div className="fixed top-0 left-0 w-full h-full bg-black flex items-center justify-center z-[9999] countdown-bg">
+      <div className="text-center w-full">
         <div 
           key={currentNumber}
           className="countdown-number animate-countdown"
